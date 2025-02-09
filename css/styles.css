@@ -1,3 +1,4 @@
+/* #region Clear Styles */
 :root {
   --color-iris: #4d5ae5;
   --color-ocean: #404bbf;
@@ -18,19 +19,10 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-optical-sizing: auto;
   font-size: 1rem;
   letter-spacing: 0.02em;
   color: var(--color-slate);
   background-color: var(--color-white);
-}
-
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
 }
 
 h1,
@@ -54,23 +46,65 @@ button {
 button {
   cursor: pointer;
   color: currentColor;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
+.list,
 ul {
   list-style: none;
 }
 
+.link,
 a {
   text-decoration: none;
+}
+
+ul,
+a {
   outline: none;
 }
 
-img {
+img,
+video {
   display: block;
   max-width: 100%;
   height: auto;
 }
+/* #endregion */
+/* #region Container Mobile-First */
+.container {
+  width: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
 
+/* Container Mobile 288px */
+@media screen and (288px <= width <= 767px) {
+  .container {
+    width: 288px;
+  }
+}
+
+/* Container Tablet 768px */
+@media screen and (768px <= width <= 1157px) {
+  .container {
+    width: 768px;
+  }
+}
+
+/* Container Desktop 1158px */
+@media screen and (1158px <= width) {
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+  }
+}
+/* #endregion */
+/* #region Visually Hidden */
+/* Тимчасово приховувати елементи */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -83,29 +117,4 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.container {
-  min-width: 320px;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 428px) {
-  .container {
-    width: 428px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .container {
-    width: 1158px;
-    padding: 0 15px;
-  }
-}
+/* #endregion */
