@@ -1,0 +1,120 @@
+/* #region Clear Styles */
+:root {
+  --color-iris: #4d5ae5;
+  --color-ocean: #404bbf;
+  --color-grey: #2e2f42;
+  --color-green: #31d0aa;
+  --color-slate: #434455;
+  --color-light-slate: #8e8f99;
+  --color-cornflower: #e7e9fc;
+  --color-cloud: #f4f4fd;
+  --color-white: #ffffff;
+  --color-dairy: #fcfcfc;
+}
+
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--color-slate);
+  background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: currentColor;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.list,
+ul {
+  list-style: none;
+}
+
+.link,
+a {
+  text-decoration: none;
+}
+
+ul,
+a {
+  outline: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* #endregion */
+/* #region Container Mobile-First */
+.container {
+  width: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+
+/* Container Mobile 288px */
+@media screen and (288px <= width <= 767px) {
+  .container {
+    width: 288px;
+  }
+}
+
+/* Container Tablet 768px */
+@media screen and (768px <= width <= 1157px) {
+  .container {
+    width: 768px;
+  }
+}
+
+/* Container Desktop 1158px */
+@media screen and (1158px <= width) {
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+  }
+}
+/* #endregion */
+/* #region Visually Hidden */
+/* Тимчасово приховувати елементи */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* #endregion */
