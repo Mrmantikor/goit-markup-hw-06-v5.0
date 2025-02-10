@@ -22,10 +22,47 @@
     <title>Web Studio</title>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="container header__wrapper">
+        <nav class="header__nav">
+          <a
+            class="header__logo header__logo--blue"
+            href="https://github.com/Mrmantikor"
+            target="_blank"
+          >
+            Web<span class="header__logo header__logo--black">Studio</span>
+          </a>
+        </nav>
+
+        <!-- Гамбургер-меню -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="menu">
+          <label for="menu-toggle" class="menu__close">✖ Закрыть</label>
+          <a href="#">Главная</a>
+          <a href="#">О нас</a>
+          <a href="#">Контакты</a>
+        </nav>
+      </div>
+    </header>
 
     <main></main>
-
-    <footer class="footer"></footer>
+    <footer>
+      <div class="box container">
+        <div class="div-item">1</div>
+        <div class="div-item">2</div>
+        <div class="div-item">3</div>
+        <div class="div-item">4</div>
+        <div class="div-item">5</div>
+        <div class="div-item">6</div>
+        <div class="div-item">7</div>
+        <div class="div-item">8</div>
+      </div>
+    </footer>
   </body>
 </html>
