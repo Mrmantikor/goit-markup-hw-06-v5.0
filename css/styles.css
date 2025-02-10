@@ -75,7 +75,6 @@ video {
 /* #endregion */
 /* #region Container Mobile-First */
 .container {
-  width: auto;
   padding-left: 1rem;
   padding-right: 1rem;
   margin: 0 auto;
@@ -116,5 +115,109 @@ video {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+/* #endregion */
+/* #region Header */
+.header__logo--blue {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-iris);
+}
+
+.header__logo--black {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-grey);
+}
+
+/* #endregion */
+/* Выравниваем элементы в header */
+.header__wrapper {
+  display: flex;
+  justify-content: space-between; /* Логотип слева, кнопка справа */
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Гамбургер-кнопка */
+.menu-toggle {
+  display: none; /* Скрываем чекбокс */
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  background: #333;
+  height: 4px;
+  width: 100%;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Меню (скрыто по умолчанию) */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100vh;
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s;
+  padding: 20px;
+}
+
+/* Показываем меню, когда чекбокс активен */
+.menu-toggle:checked ~ .menu {
+  left: 0;
+}
+
+/* Анимация кнопки при активации */
+.menu-toggle:checked ~ .menu-btn span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle:checked ~ .menu-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle:checked ~ .menu-btn span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Кнопка закрытия меню */
+.menu__close {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: right;
+  cursor: pointer;
+  color: red;
+}
+
+/* #region Grid */
+.box {
+  display: grid;
+  grid-template-columns: 100px 130px;
+  gap: 2rem 1rem;
+}
+.div-item {
+  border: 1px solid #000;
+  background-color: var(--color-green);
+  color: var(--color-cloud);
+  padding: 1rem;
 }
 /* #endregion */
